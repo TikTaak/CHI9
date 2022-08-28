@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <center>
+        <h1>دفتر اسناد رسمی 306 فولادشهر</h1>
+        <p>.</p>
+        <button class="btn btn-outline-secondary" type = "submit" > <h2> <a href = "{% url 'customer_create' %}">Add Customer</a> </h2> </button>
+        <p>.</p>    
+        <button class="btn btn-outline-secondary" type = "submit"> <h2> <a href = "{% url 'customers' %}">Find Customer</a> </h2> </button>
+        <p>.</p>    
+        <button class="btn btn-outline-secondary" type = "submit"> <h2> <a href = "{% url 'tags_create' %}">Creat Tag</a> </h2> </button>
+
+    </center>
+{% endblock content %}
+    

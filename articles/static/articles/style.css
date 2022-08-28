@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    background: white;
+    height: 100vh;
+}
+
+.card {
+    background: #fff;
+    height: 200px;
+    display: flex;
+    margin-top: 20px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 10px #888888;
+}

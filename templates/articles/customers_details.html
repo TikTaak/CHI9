@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    {% comment %} <center>
+        <h1>{{object.name}}</h1>
+        <h2> {{ object.National_code }} </h2>
+        <h3>{{ object.date }} </h3>
+        <p>
+            {{ object.description}}
+        </p>
+        
+
+        <a href="{% url 'customer_edit' object.pk %}">Edit</a> | <a href="{% url 'customer_delete' object.pk %}">Delete</a>
+    </center> {% endcomment %}
+
+
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Tarikh : {{ articles_id.date }}</div>
+    </div>
+
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Code : {{ articles_id.pk }}</div>
+      {% comment %} <a href = "{% url 'customer_detail' ab.pk %}"> Details </a> | <a href="{% url 'customer_edit' ab.pk %}">Edit</a> | <a href="{% url 'customer_delete' ab.pk %}">Delete</a> {% endcomment %}
+    </div>
+
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">{{ articles_id.name}}</div>
+      National Code : {{ articles_id.National_code }}
+    </div>
+
+  </li>
+<hr>
+</ol>
+ 
+  <center>
+    <h3>: توضیحات</h3>
+    {{articles_id.describtion}}
+    <hr>
+    <h3>: تگ ها</h3>
+    {% for t in tags %}
+        <li>{{t.title}}</li>
+    {% endfor %}
+  </center>
+
+{% endblock content %}
+    

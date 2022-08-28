@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    
+    <h2>Delete {{ object }} </h2>
+    <hr>
+    <form action = "" class="form-horizontal" method="POST">
+        {% csrf_token %}
+        <button type = "submit" class="btn btn-primary">Delete</button>
+{% endblock content %}
+    

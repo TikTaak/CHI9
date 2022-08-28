@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class = "rowg-3">
+    <div class = "col-md-4">
+        <p>.</p>
+            {% for tags in tags_list %}
+                <li> {{ tags.title }} - <a href="{% url 'tags_edit' tags.pk %}">Edit</a> | <a href="{% url 'tags_delete' tags.pk %}">Delete</a></li>
+            {% endfor %}
+        <p>.</p>
+        <p>.</p>
+        <button class="btn btn-outline-secondary" type = "submit"> <h2> <a href = "{% url 'tags_create' %}">Create Tag</a> </h2> </button>
+</div>
+{% endblock content %}
